@@ -1,0 +1,590 @@
+:root {
+
+
+    --color-1: #4A6360;
+    --color-2: #81948B;
+    --color-3: #C6D7CF;
+    --color-4: #f7e0ce;
+    --color-5: #EFEDE7;
+    --color-6: #A27F67;
+    --color-7: #BFA880;
+    --color-8: #4b0000;
+    --color-9:#555452;
+    --color10: #555452;
+  
+  
+    /* Fuentes */
+  
+    --fuente-1:'Dancing Script', cursive;
+    --fuente-2:'Open Sans', sans-serif;
+  
+    /* font-family: 'Cookie', cursive;
+    font-family: 'Open Sans', sans-serif; */
+  
+  }
+  
+* {
+    box-sizing: border-box; /* Incluye padding y bordes en las dimensiones del elemento */
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    height: 100%;
+    overflow-x: hidden; /* Evita el scroll horizontal */
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color-4); /* Fondo semitransparente */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Asegura que esté encima de todo */
+}
+
+/* Contenido del overlay */
+.overlay-content {
+    text-align: center;
+}
+
+.overlay-content h1 {
+    width: 100%;
+    text-align: center;
+    font-family: var(--fuente-1);
+    font-size: 60px;
+    color: var(--color10);
+    line-height: 65px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+/* Ocultar el contenido principal inicialmente */
+.main-content {
+    display: none;
+}
+
+/* Botón estilizado */
+#closeOverlay {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 15px;
+    color: var(--color10);
+
+}
+
+#closeOverlay:hover {
+    background-color: #0056b3;
+}
+
+
+
+.content {
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    position: relative; /* Asegura que el contenido se coloque encima de la imagen */
+    justify-content: center;
+    align-items: center;
+}
+.content {
+    overflow-y: auto; /* Permite hacer scroll vertical en el contenido */
+}
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; /* ancho del viewport */
+    height: 100vh; /* alto del viewport */
+    background: url('../images/fondo2.jpeg') no-repeat center center/cover;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+
+    z-index: 1; /* Para asegurar que la imagen esté detrás del contenido */
+}
+
+section.portada {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    height: calc(100vh + 300px); /* 100% del viewport height */
+    background-color: rgba(74,79,96,0.65); /* Fondo semi-transparente más oscuro */
+    color: white;
+    scroll-snap-align: start; /* Opcional: Suaviza el scroll entre secciones */
+    width: 100%;
+}
+.superior-content-portada{
+    height: 20vh;
+}
+
+section.portada .content-portada {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+
+section.portada .content-portada .line-left{
+    width: 65px;
+    border-bottom: 1px solid white;
+    height: 40%;
+    margin-right: 20px;
+}
+section.portada .content-portada .box-fecha {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section.portada .content-portada span.fecha{
+    display: table;
+    white-space: nowrap;
+    font-family: var(--fuente-2);
+    font-weight:300;
+    font-size: 25px;
+    color: #fff;
+  }
+  section.portada .content-portada .line-right{
+    width: 65px;
+    border-bottom: 1px solid white;
+    height: 40%;
+    margin-left: 20px;
+}
+
+section.portada .content-portada .box-nombres-portada h1{
+    width: 100%;
+    text-align: center;
+    font-family: var(--fuente-1);
+    font-size: 65px;
+    line-height: 65px;
+    font-weight: 500;
+}
+section.portada .content-portada .box-nombres-portada span {
+    width: 100%;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 45px;
+    line-height: 65px;
+    font-weight: 300;
+}
+section.portada .content-portada .line {
+    height: 1px;
+    width: 34%;
+    background-color: #fff;
+    margin: 0 auto;
+    margin-top: 34px;
+}
+
+section.portada .content-portada .box-frase-portada {
+    margin-top: 25px;
+    font-family: var(--fuente-2);
+    font-weight: 300;
+    font-size: 20px;
+    text-align: center;
+}
+
+.inferior-content-portada{
+    height: 10vh;
+}
+.inferior-content-portada .flecha-continuar{
+    height: 60px;
+
+    animation: bounce 1.5s infinite ease-in-out;
+    
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0); /* Flecha en la posición original */
+  }
+  50% {
+    transform: translateY(-10px); /* Flecha sube un poco */
+  }
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+
+/* Cuenta regresiva */
+section.cuenta-regresiva{
+    background-color: var(--color-4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 160px;
+    scroll-snap-align: start; /* Opcional: Suaviza el scroll entre secciones */
+
+  }
+  
+  section.cuenta-regresiva .box-aros{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100vw;
+    height: 470px;
+    z-index: 99;
+    top:-80px;
+    position: relative;
+  }
+  
+  section.cuenta-regresiva .box-aros .box-circulo{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 315px;
+    height: 315px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 50%;
+    -webkit-box-shadow: 0px 0px 15px -1px rgba(0,0,0,0.40);
+    -moz-box-shadow: 0px 0px 15px -1px rgba(0,0,0,0.40);
+    box-shadow: 0px 0px 15px -1px rgba(0,0,0,0.40);
+  }
+  
+  section.cuenta-regresiva .box-aros .box-circulo span.falta{
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    font-family: var(--fuente-2);
+    font-weight: 300;
+    font-size: 40px;
+    color: var(--color-7);
+    margin-top: 30px;
+  }
+  
+  section.cuenta-regresiva .box-aros .box-circulo .corazon-falta{
+    margin-top: 5px;
+    animation: pulse 1.5s infinite ease-in-out;
+  }
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 0.7;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  section.cuenta-regresiva .reloj{
+    margin-top: 10px;
+    margin-bottom: 25px;
+  }
+  
+  section.cuenta-regresiva .reloj-col{
+    width: 25%;
+    border-right: 1px solid #ccc;
+    padding: 0 8px;
+    float: left;
+  }
+  
+  section.cuenta-regresiva .reloj-col.no-border{
+    border: none;
+  }
+  
+  section.cuenta-regresiva .reloj-col span.number{
+    display: inline-block;
+    width: 100%;
+    color: var(--color-6);
+    font-family: var(--fuente-2);
+    font-weight: 700;
+    font-size: 35px;
+  }
+  
+  section.cuenta-regresiva .reloj-col span.time{
+    display: inline-block;
+    width: 100%;
+    color: var(--color-7);
+    font-family: var(--fuente-2);
+    font-size: 20px;
+    font-weight: 300;
+  }
+  
+  section.cuenta-regresiva p.fin-cuenta{
+    font-size: 30px;
+    color: var(--color-3);
+    font-family: 'DM Serif Display', serif;
+  }
+  
+  
+  section.celebracion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-4);
+    scroll-snap-align: start; /* Opcional: Suaviza el scroll entre secciones */
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  section.celebracion h3 {
+    padding: 8px 30px;
+    font-size: 50px;
+    font-family: var(--fuente-1);
+    color: var(--color-7);
+    background-color: white;
+    display: inline-block;
+    position: relative;
+    min-width: 40%;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  section.celebracion h6{
+    font-family: var(--fuente-2);
+    color: var(--color-9);
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-top: 20px;
+
+  }
+
+  section.celebracion p {
+    font-family: var(--fuente-2);
+    color: var(--color-8);
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 5px;
+
+  }
+
+  .arco-texto {
+    display: inline-block;
+    font-size: 36px;
+    font-weight: bold;
+    color: var(--color-9); /* Color deseado */
+    text-align: center;
+    white-space: nowrap; /* Evita que el texto se envuelva en múltiples líneas */
+    position: relative;
+    transform: rotate(-20deg); /* Inclina el texto para comenzar el arco */
+
+    /* Arco interno */
+    ::before {
+        content: attr(data-text);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform-origin: 50% 50%;
+        transform: translate(-50%, -50%) rotate(20deg); 
+        color: inherit;
+        text-align: center;
+        font-size: 36px;
+    }
+}
+
+  /* ---------- */
+  .boton{
+    margin-top:25px;
+    background: #fff;
+    color: var(--color-2);
+    text-transform: uppercase;
+    font-family: var(--fuente-2);
+    font-weight: 700;
+    border-radius: 50px;
+    line-height: 15px;
+    font-size: 15px;
+    padding: 13px 30px;
+  }
+
+  a {
+    text-decoration: none;  /* Quita el subrayado */
+    color: inherit;  /* Mantiene el color del texto */
+}
+
+section.confirmacion {
+    background-color: var(--color-4);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    scroll-snap-align: start; /* Opcional: Suaviza el scroll entre secciones */
+    width: 100%;
+    flex-direction: column;
+    padding-bottom: 20px;
+    height: 500px;
+    padding-top: 20px;
+}
+
+section.confirmacion .nombreInvitados {
+    width: 60%;
+    height: 25px;
+    border-radius: 9px;
+    padding: 10px;
+    box-shadow: none;
+    border: 1px solid #ccc;
+    margin-right: 10px;;
+}
+
+section.confirmacion .rowInvitado {
+    margin-bottom: 10px;
+    display: flex; 
+    justify-content:center;
+}
+
+section.confirmacion .comboTipoPersona {
+    width: 20%;
+    height: 25px;
+    border-radius: 9px;
+    border: 1px solid #ccc;
+    font-family:var(--fuente-2);
+    
+}
+
+section.confirmacion textarea {
+    width: 83%;
+    border-radius: 9px;
+    padding: 10px;
+    box-shadow: none;
+    border: 1px solid #ccc;
+}
+
+section.confirmacion h6{
+    font-family: var(--fuente-2);
+    color: var(--color-9);
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    
+    margin-top: 20px;
+  }
+
+
+  section.confirmacionRecibida {
+    background-color: var(--color-4);
+    display: none;
+    align-items: center;
+    scroll-snap-align: start; /* Opcional: Suaviza el scroll entre secciones */
+    width: 100%;
+    flex-direction: column;
+    padding-bottom: 20px;
+    height: 500px;
+
+}
+
+section.confirmacionRecibida h6{
+  font-family: var(--fuente-2);
+  color: var(--color-9);
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  
+  margin-top: 20px;
+}
+
+section.confirmacionRecibida p {
+  font-family: var(--fuente-2);
+  color: var(--color-8);
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 5px;
+
+}
+
+section.confirmacionRecibida .confirmacionInvitados {
+  display: none;
+  flex-direction: row;
+  margin-bottom: 10px;
+  gap:15px;
+  justify-content: space-between;
+  width: 80%;
+}
+
+section.mensajeFinal {
+  background-color: var(--color-4);
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start; /* Opcional: Suaviza el scroll entre secciones */
+  width: 100%;
+  flex-direction: column;
+  padding-bottom: 20px;
+  height: 200px;
+}
+
+section.mensajeFinal h6{
+  font-family: var(--fuente-2);
+  color: var(--color-9);
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  
+  margin-top: 20px;
+}
+
+section.mensajeFinal p {
+  font-family: var(--fuente-2);
+  color: var(--color-8);
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 5px;
+
+}
+
+
+
+
+#loading-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  z-index: 1000; /* Asegura que siempre esté encima del contenido */
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+  color: white;
+}
+
+#loading-spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid #ccc;
+  border-top-color: #007bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+#loading-text {
+  font-size: 16px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#background-music {
+  display: none; /* Oculta el reproductor de audio */
+}
