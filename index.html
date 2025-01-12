@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagen de Fondo Fija y Maquetación con Flexbox</title>
+    <link rel="stylesheet" href="styles/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <audio id="background-music" autoplay loop>
+        <source src="audio/invitacion.mp3" type="audio/mpeg">
+        Tu navegador no soporta la etiqueta de audio.
+    </audio>
+    <div id="loading-container">
+        <div id="loading-spinner"></div>
+        <span id="loading-text">Enviando confirmación...</span>
+      </div>
+    <div id="overlay">
+        <div class="overlay-content">
+            <h1>¡Nos Casamos!</h1>
+            <img style="width: 93%;" src="/images/fondoInicial.jpeg" alt="Descripción de la imagen" width="250" height="auto">
+
+            <button class="boton" id="closeOverlay">Entrar en Invitación</button>
+        </div>
+    </div>
+    <div class="background-image"></div>
+    <div class="content">
+        <section class="portada">
+            <div class="superior-content-portada">
+            </div>
+            <div class="content-portada">
+
+                <div class="box-fecha">
+                    <div class="line-left"></div>
+                    <span class="fecha">15.03.2025</span>
+                    <div class="line-right"></div>
+                </div>
+                <div class="box-nombres-portada">
+                    <h1>
+                        Alejandro            
+                        <br class="d-md-none">
+                        <span>&amp;</span>
+                        <br class="d-md-none">
+                        Rosi          
+                    </h1>
+                </div>
+                <div class="line"></div>
+                <div class="box-frase-portada">
+                    <p>
+                        <br>
+                        ¿Puede haber un día más especial? <br> Ven a celebrarlo con nosotros <br>
+                    </p>
+                </div>
+                <div class="d-flex justify-content-center align-items-center">
+                </div>
+            </div>            
+            <div class="inferior-content-portada">
+                <div class="flecha-continuar"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 607 607" width="607" height="607" preserveAspectRatio="xMidYMid meet" style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px);"><defs><clippath id="__lottie_element_92"><rect width="607" height="607" x="0" y="0"></rect></clippath></defs><g clip-path="url(#__lottie_element_92)"><g transform="matrix(-1,0,0,-1,303.50799560546875,376.9637451171875)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,0,0)"><path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="10" stroke="rgb(255,255,255)" stroke-opacity="1" stroke-width="20" d=" M-210.9709930419922,120.15899658203125 C-210.9709930419922,120.15899658203125 -0.00800000037997961,-120.33300018310547 -0.00800000037997961,-120.33300018310547 C-0.00800000037997961,-120.33300018310547 210.9709930419922,120.33300018310547 210.9709930419922,120.33300018310547"></path></g></g><g transform="matrix(-1,0,0,-1,426,323.91998291015625)" opacity="1" style="display: none;"><g opacity="1" transform="matrix(1,0,0,1,0,0)"><path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="10" stroke="rgb(255,255,255)" stroke-opacity="1" stroke-width="20" d=" M103.50399780273438,244.27499389648438 C108.38600158691406,244.6490020751953 113.30799865722656,244.8800048828125 118.26499938964844,244.96400451660156"></path></g></g><g transform="matrix(-1,0,0,-1,181,323.91998291015625)" opacity="1" style="display: none;"><g opacity="1" transform="matrix(1,0,0,1,0,0)"><path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="10" stroke="rgb(255,255,255)" stroke-opacity="1" stroke-width="20" d=" M-103.50399780273438,244.27499389648438 C-108.38600158691406,244.6490020751953 -113.30799865722656,244.8800048828125 -118.26499938964844,244.96400451660156"></path></g></g><g style="display: none;" transform="matrix(-0.6474335193634033,-0.9598596692085266,0.9598596692085266,-0.6474335193634033,219.33364868164062,163.1382598876953)" opacity="1"><g opacity="1" transform="matrix(1,0,0,1,0,0)"><path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="10" stroke="rgb(255,255,255)" stroke-opacity="1" stroke-width="5" d=" M126.76599884033203,-41.12699890136719 C127.55400085449219,-36.16299819946289 128.2030029296875,-31.152000427246094 128.70599365234375,-26.099000930786133"></path></g></g><g style="display: none;" transform="matrix(0.9484142065048218,0.6640867590904236,-0.6640867590904236,0.9484142065048218,422.7938537597656,382.2122802734375)" opacity="1"><g opacity="1" transform="matrix(1,0,0,1,0,0)"><path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="10" stroke="rgb(255,255,255)" stroke-opacity="1" stroke-width="5" d=" M-88.87300109863281,-256.7659912109375 C-93.83699798583984,-257.5539855957031 -98.8479995727539,-258.2030029296875 -103.9010009765625,-258.70599365234375"></path></g></g><g style="display: none;" transform="matrix(-1,0,0,-1,303.50799560546875,304.209716796875)" opacity="1"><g opacity="1" transform="matrix(1,0,0,1,0,0)"><path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="10" stroke="rgb(255,255,255)" stroke-opacity="1" stroke-width="20" d=" M-210.9709930419922,120.15899658203125 C-210.9709930419922,120.15899658203125 -0.00800000037997961,-120.33300018310547 -0.00800000037997961,-120.33300018310547 C-0.00800000037997961,-120.33300018310547 205.0749969482422,113.60700225830078 210.8470001220703,120.19100189208984"></path></g></g></g></svg></div>
+            </div>
+            <div style="height: 275px;"></div>
+        </section>
+        <section class="cuenta-regresiva">
+            <div class="box-aros">
+            <div class="box-circulo">
+
+                <span class="falta">Faltan</span>
+
+                <div id="reloj" class="reloj">
+
+                <div id="dias" class="reloj-col">
+                    <span class="number">39</span>
+                    <span class="time">días</span>
+                </div>
+
+                <div id="horas" class="reloj-col">
+                    <span class="number">19</span>
+                    <span class="time">hs</span>
+                </div>
+
+                <div id="minutos" class="reloj-col">
+                    <span class="number">57</span>
+                    <span class="time">min</span>
+                </div>
+
+                <div id="segundos" class="reloj-col no-border">
+                    <span class="number">34</span>
+                    <span class="time">seg</span>
+                </div>
+
+                <div class="clearfix"></div>
+
+                </div>
+
+                <!-- Corazon -->
+                <div class="corazon-falta"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38 32" width="38" height="32" preserveAspectRatio="xMidYMid meet" style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px);"><defs><clippath id="__lottie_element_111"><rect width="38" height="32" x="0" y="0"></rect></clippath></defs><g clip-path="url(#__lottie_element_111)"><g transform="matrix(0.8412699699401855,0,0,0.8412699699401855,3.0360612869262695,2.484156608581543)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,18.97599983215332,16.06599998474121)"><path fill="rgb(129,148,139)" fill-opacity="1" d=" M-1.1369999647140503,15.593999862670898 C-0.7720000147819519,15.741999626159668 -0.38600000739097595,15.815999984741211 0.0010000000474974513,15.815999984741211 C0.3869999945163727,15.815999984741211 0.7730000019073486,15.741999626159668 1.1369999647140503,15.593999862670898 C1.8550000190734863,15.300999641418457 18.725000381469727,8.284000396728516 18.725000381469727,-4.073999881744385 C18.725000381469727,-10.550000190734863 13.385000228881836,-15.815999984741211 6.820000171661377,-15.815999984741211 C4.349999904632568,-15.815999984741211 1.9789999723434448,-15.067000389099121 0.0010000000474974513,-13.70199966430664 C-1.9780000448226929,-15.067000389099121 -4.348999977111816,-15.815999984741211 -6.817999839782715,-15.815999984741211 C-13.383999824523926,-15.815999984741211 -18.725000381469727,-10.550000190734863 -18.725000381469727,-4.073999881744385 C-18.725000381469727,8.284000396728516 -1.8550000190734863,15.300999641418457 -1.1369999647140503,15.593999862670898z"></path></g></g></g></svg></div>
+
+
+            </div>
+            </div>
+        </section>
+        <section class="celebracion">
+
+
+            <h6>Día</h6>
+            <p style="min-width: 270px;">Sábado 15 de Marzo - 13h</p>
+
+            <h6>Lugar</h6>
+            <a href="https://fincapuertadehierro.com/">
+                <img src="/images/PuertaHierro.png" alt="Descripción de la imagen" width="250" height="auto">
+            </a>
+
+            <h6>Dirección</h6>
+            <p>SE-221, 21, 41420 Fuentes de Andalucía, Sevilla</p>
+            <a  href="https://maps.app.goo.gl/z6BrWwwYAEQTumeR8">
+                <div style="min-width: 190px; text-align:center" class="boton">Cómo LLegar</div>
+            </a>
+        </section>
+        <section class="confirmacion" id="seccionFormulario">
+
+            <h6>¿Quién te acompaña?</h6>
+
+            <form id="formularioConfirmacion" action="/test" 
+            method="POST" > <!-- Enlace al script de procesamiento -->
+                <div class="rowInvitado">
+                    <!-- Invitado 1 -->
+                    <input name="invitado1" type="text" class="nombreInvitados" placeholder="Nombre y Apellidos (Invitado 1)" required>
+                    
+                    <select name="opcion1" id="opcion1" class="comboTipoPersona" required>
+                        <option value="" selected></option>
+                        <option value="Adulto">Adulto</option>
+                        <option value="Niño">Mesa Niños</option>
+                        <option value="Bebe">Bebé</option>
+                    </select>
+                </div>
+
+                <!-- Invitado 2 -->
+                <div class="rowInvitado">
+                    <input name="invitado2" type="text" class="nombreInvitados" placeholder="Nombre y Apellidos (Invitado 2)" >
+                    
+                    <select name="opcion2" id="opcion" class="comboTipoPersona"  >
+                        <option value="" selected></option>
+                        <option value="Adulto">Adulto</option>
+                        <option value="Niño">Mesa Niños</option>
+                        <option value="Bebe">Bebé</option>
+                    </select>
+                </div>      
+
+               <!-- Invitado 3 -->
+               <div class="rowInvitado">
+                <input name="invitado3" type="text" class="nombreInvitados" placeholder="Nombre y Apellidos (Invitado 3)" >
+                    
+                    <select id="opcion" class="comboTipoPersona" name="opcion3" >
+                        <option value="" selected></option>
+                        <option value="Adulto">Adulto</option>
+                        <option value="Niño">Mesa Niños</option>
+                        <option value="Bebe">Bebé</option>
+                    </select>
+                </div>  
+
+            <!-- Invitado 4 -->
+            <div class="rowInvitado">
+                <input name="invitado4" type="text" class="nombreInvitados" placeholder="Nombre y Apellidos (Invitado 4)" >
+                <select id="opcion" class="comboTipoPersona" name="opcion4" >
+                    <option value="" selected></option>
+                    <option value="Adulto">Adulto</option>
+                    <option value="Niño">Mesa Niños</option>
+                    <option value="Bebe">Bebé</option>
+                </select>
+            </div>  
+
+            <!-- Invitado 5 -->
+            <div class="rowInvitado">
+                <input name="invitado5" type="text" class="nombreInvitados" placeholder="Nombre y Apellidos (Invitado 5)" >
+                
+                <select id="opcion" class="comboTipoPersona" name="opcion5" >
+                    <option value="" selected></option>
+                    <option value="Adulto">Adulto</option>
+                    <option value="Niño">Mesa Niños</option>
+                    <option value="Bebe">Bebé</option>
+                </select>
+            </div>  
+
+            <!-- Invitado 6 -->
+            <div class="rowInvitado">
+                <input name="invitado6" type="text" class="nombreInvitados" placeholder="Nombre y Apellidos (Invitado 6)" >
+                
+                <select id="opcion" class="comboTipoPersona" name="opcion6" >
+                    <option value="" selected></option>
+                    <option value="Adulto">Adulto</option>
+                    <option value="Niño">Mesa Niños</option>
+                    <option value="Bebe">Bebé</option>
+                </select>
+            </div>  
+                <!-- Posibles intolerancias -->
+                <textarea id="intolerancias" name="intolerancias" placeholder="Indique el nombre de las personas alérgicas o intolerantes seguido de los detalles de las alergias (ej. Juan Pérez - Lactosa)." rows="4" cols="50"></textarea>
+        
+                <!-- Comentario General -->
+                <textarea id="comentario" name="comentario" placeholder="Comentario General" rows="4" cols="50"></textarea>
+        
+                <!-- Botón de Envío -->
+                <input class="boton" style="margin-top:5px; border:none" type="submit" value="Enviar Confirmación">
+            </form>
+        </section>
+        <section class="confirmacionRecibida" id="confirmacionRecibida">
+
+            <h6 id="resultado">Asistencia Confirmada</h6>
+            <div id="confirmacion1" class="confirmacionInvitados">
+                <p id="confirmaInvitado1"></p>
+                <p id="confirmaOpcion1" style="font-style: italic"></p>
+            </div>
+            <div id="confirmacion2" class="confirmacionInvitados">
+                <p id="confirmaInvitado2"></p>
+                <p id="confirmaOpcion2" style="font-style: italic"></p>
+            </div>
+            <div id="confirmacion3" class="confirmacionInvitados">
+                <p id="confirmaInvitado3"></p>
+                <p id="confirmaOpcion3" style="font-style: italic"></p>
+            </div>
+            <div id="confirmacion4" class="confirmacionInvitados">
+                <p id="confirmaInvitado4"></p>
+                <p id="confirmaOpcion4" style="font-style: italic"></p>
+            </div>
+            <div id="confirmacion5" class="confirmacionInvitados">
+                <p id="confirmaInvitado5"></p>
+                <p id="confirmaOpcion5" style="font-style: italic"></p>
+            </div>
+            <div id="confirmacion6" class="confirmacionInvitados">
+                <p id="confirmaInvitado6"></p>
+                <p id="confirmaOpcion6" style="font-style: italic"></p>
+            </div>
+
+            <div id="divIntolerancias" style="display: none; flex-direction:column; width:80%; justify-content:flex-start; align-items:start; text-align: left;">
+                <p style="font-weight: 700;" id="tituloIntolerancias">Alergias o intolerancias</p>
+                <p style="margin-left: 10px;" id="confirmaIntolerancias"></p>
+            </div>  
+            <div id="divComentarios" style="display: none; flex-direction:column; width:80%; justify-content:flex-start; align-items:start; text-align: left;">
+                <p style="font-weight: 700;" id="tituloComentarios">Comentarios</p>
+                <p style="margin-left: 10px;" id="confirmaComentarios"></p>
+            </div>  
+            <div id="divMensajeAgradecimiento" style="display: none; flex-direction:column; width:80%; justify-content:flex-start; align-items:start; text-align: left;">
+                <p style="font-weight: 700;" id="tituloComentarios"></p>
+            </div>  
+        </section>
+
+        <section class="mensajeFinal">
+            <h6>¡GRACIAS!</h6>
+            <p>ES80 0239 0806 7600 4216 1026</p>
+        </section>
+
+    </div>
+</body>
+<script src="js/script.js"></script>
+
+</html>
